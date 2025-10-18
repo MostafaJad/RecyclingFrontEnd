@@ -12,7 +12,8 @@ function RewardsPage() {
   useEffect(() => {
     const fetchRewards = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/rewards");
+        const apiUrl = import.meta.env.VITE_API_URL;
+        const response = await fetch(`${apiUrl}/rewards`);
         if (!response.ok) {
           throw new Error("Could not fetch rewards");
         }

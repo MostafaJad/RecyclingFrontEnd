@@ -3,7 +3,6 @@
 import { useContext, useState } from "react";
 import "./AuthPage.css";
 import { AuthContext } from "../auth-context";
-
 function AuthPage() {
   const auth = useContext(AuthContext);
   const [isLoginMode, setIsLoginMode] = useState(true);
@@ -27,7 +26,9 @@ function AuthPage() {
 
     if (isLoginMode) {
       try {
-        const response = await fetch("http://127.0.0.1:8000/login", {
+        const apiUrl = import.meta.env.VITE_API_URL;
+
+        const response = await fetch(`${apiUrl}/login`, {
           method: "POST",
           body: new URLSearchParams({ username: email, password: password }),
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -43,7 +44,7 @@ function AuthPage() {
       }
     } else {
       try {
-        const response = await fetch("http://127.0.0.1:8000/signup", {
+        const response = await fetch(`${apiUrl}/signup`, {
           method: "POST",
           body: JSON.stringify({ email, password }),
           headers: { "Content-Type": "application/json" },

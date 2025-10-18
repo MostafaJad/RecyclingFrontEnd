@@ -31,7 +31,8 @@ function UploadPage() {
     console.log("Sending token:", auth.token); // Your spy is still good
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/analyze", {
+      const apiUrl = import.meta.env.VITE_API_URL;
+      const response = await fetch(`${apiUrl}/analyze`, {
         method: "POST",
         headers: { Authorization: "Bearer " + auth.token },
         body: formData,
