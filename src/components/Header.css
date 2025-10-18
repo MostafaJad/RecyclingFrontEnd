@@ -1,0 +1,53 @@
+/* src/Header.css */
+.main-header {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.main-header h2 {
+  margin: 0;
+  color: #1a535c;
+}
+
+.main-header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.main-header nav a {
+  text-decoration: none;
+  color: #495057;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.main-header nav a.active {
+  color: #4ecdc4;
+  border-bottom: 2px solid #4ecdc4;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-right button {
+    background-color: #f0f4f8;
+    color: #1a535c;
+    border: 1px solid #a8dadc;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,0 +1,69 @@
+/* src/PointsJar.css */
+.jar-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.jar-container {
+  width: 50px;
+  height: 70px;
+  border: 3px solid #1a535c;
+  border-radius: 5px 5px 20px 20px;
+  position: relative;
+  background-color: #f0f4f8;
+  overflow: hidden; /* This hides the part of the fill that goes above the jar */
+}
+
+.jar-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f4a261;
+  transition: height 0.5s ease-in-out; /* The magic animation! */
+}
+
+.points-display {
+  font-weight: bold;
+  color: #1a535c;
+  font-size: 0.9em;
+}
+
+
+.jar-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: height 0.5s ease-in-out;
+  background-color: rgba(9, 160, 242, 0.5); /* Lighter base color */
+}
+
+.wave {
+  position: absolute;
+  bottom: 100%; /* Position the top of the wave at the top of the fill */
+  left: -50%;
+  width: 200%;
+  height: 10px; /* Height of the wave */
+  background-color: #318cee;
+  border-radius: 45%;
+  animation: wave-motion 2s linear infinite;
+}
+
+.wave-back {
+  opacity: 0.5;
+  animation-duration: 4s; /* Slower back wave */
+  bottom: 95%; /* Slightly offset */
+}
+
+/* Keyframes define the animation */
+@keyframes wave-motion {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(30%); /* Moves the wave to create the illusion */
+  }
+}

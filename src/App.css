@@ -1,0 +1,72 @@
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #f0f4f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  color: #1a535c;
+}
+
+.upload-box {
+  margin-top: 20px;
+  padding: 30px;
+  border: 2px dashed #a8dadc;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.image-placeholder {
+  font-size: 50px;
+  padding: 20px;
+}
+
+.upload-button {
+  background-color: #4ecdc4;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.upload-button:hover {
+  background-color: #1a535c;
+}
+.image-preview {
+  max-width: 100%;
+  max-height: 250px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.analyze-button {
+  background-color: #f4a261; /* A different color */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.analyze-button:hover {
+  background-color: #e76f51;
+}
+
+.result-box {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e9ecef;
+  color: #495057;
+}
