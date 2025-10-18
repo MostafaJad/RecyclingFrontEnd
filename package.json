@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "confetti": "^2.0.6",
     "react": "^19.1.1",
+    "react-confetti": "^6.4.0",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.4"
   },
