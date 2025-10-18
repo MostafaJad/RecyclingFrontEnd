@@ -4,6 +4,8 @@ import "./RewardsPage.css";
 import Header from "../components/Header";
 
 function RewardsPage() {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const auth = useContext(AuthContext);
   const [rewards, setRewards] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -12,7 +14,6 @@ function RewardsPage() {
   useEffect(() => {
     const fetchRewards = async () => {
       try {
-        const apiUrl = import.meta.env.VITE_API_URL;
         const response = await fetch(`${apiUrl}/rewards`);
         if (!response.ok) {
           throw new Error("Could not fetch rewards");

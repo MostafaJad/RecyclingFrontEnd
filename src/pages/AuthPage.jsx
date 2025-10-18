@@ -4,6 +4,8 @@ import { useContext, useState } from "react";
 import "./AuthPage.css";
 import { AuthContext } from "../auth-context";
 function AuthPage() {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const auth = useContext(AuthContext);
   const [isLoginMode, setIsLoginMode] = useState(true);
   const [email, setEmail] = useState("");
@@ -26,8 +28,6 @@ function AuthPage() {
 
     if (isLoginMode) {
       try {
-        const apiUrl = import.meta.env.VITE_API_URL;
-
         const response = await fetch(`${apiUrl}/login`, {
           method: "POST",
           body: new URLSearchParams({ username: email, password: password }),

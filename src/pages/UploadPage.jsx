@@ -6,6 +6,8 @@ import Header from "../components/Header";
 import "../App.css";
 
 function UploadPage() {
+  const apiUrl = import.meta.env.VITE_API_URL;
+
   const auth = useContext(AuthContext);
   const fileInputRef = useRef(null);
   const [selectedFile, setSelectedFile] = useState(null);
@@ -31,7 +33,6 @@ function UploadPage() {
     console.log("Sending token:", auth.token); // Your spy is still good
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL;
       const response = await fetch(`${apiUrl}/analyze`, {
         method: "POST",
         headers: { Authorization: "Bearer " + auth.token },
